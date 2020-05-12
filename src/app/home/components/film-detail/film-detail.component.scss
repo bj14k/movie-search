@@ -1,0 +1,23 @@
+.content {
+  height: 40rem;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+img {
+  height: 40rem;
+  object-fit: cover;
+  width: 30rem;
+}
+
+.details {
+  align-items: center;
+  background-color: #000000;
+  bottom: 0;
+  color: #ffffff;
+  display: flex;
+  height: 3rem;
+  padding: 0 1rem;
+  position: absolute;
+  width: 28rem;
+}

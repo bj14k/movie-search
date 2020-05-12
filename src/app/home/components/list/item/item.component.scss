@@ -1,0 +1,15 @@
+.content {
+  align-items: center;
+  border: 2px solid #00b4cc;
+  border-radius: 5px;
+  display: flex;
+  height: 6.2rem;
+  padding: 0 1rem;
+  margin: 0.2rem 0;
+  width: 90%;
+}
+
+.content:hover {
+  background-color: #00b4cc;
+  cursor: pointer;
+}
