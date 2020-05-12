@@ -1,6 +1,9 @@
-<div class="wrapper-list">
-  <app-item
-    *ngFor="let film of [1, 2, 3, 4, 5, 6, 7, 8]"
-    [film]="film"
-  ></app-item>
+<div class="wrapper-list" *ngIf="films.length; else noData">
+  <app-item *ngFor="let film of films" [film]="film"></app-item>
 </div>
+
+<ng-template #noData>
+  <div class="wrapper-list">
+    No data found for record: {{ homeService.text$ | async }}
+  </div>
+</ng-template>

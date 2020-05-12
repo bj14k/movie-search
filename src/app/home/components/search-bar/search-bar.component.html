@@ -1,8 +1,13 @@
 <div class="wrap">
   <div class="search">
-    <input type="text" class="search-term" placeholder="Search..." />
-    <button type="submit" class="add-favorite">
-      <span class="star">☆</span>
+    <input
+      type="text"
+      (keyup)="onKeyUp($event.target.value)"
+      class="search-term"
+      placeholder="Search..."
+    />
+    <button (click)="addToFav()" type="submit" class="add-favorite">
+      <span class="star" [ngClass]="{ active: active }">☆</span>
     </button>
   </div>
 </div>

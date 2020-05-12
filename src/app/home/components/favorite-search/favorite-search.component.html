@@ -1,8 +1,8 @@
 <div>
-  <span>Your 3 most favorite searches</span>
+  <span *ngIf="getLength()">Your {{ getLength() }} most favorite searches</span>
   <div class="box">
-    <div class="item" *ngFor="let item of [0, 1, 2, 3]">
-      Asd
+    <div class="item" *ngFor="let key of getKeys()">
+      {{ key }} ({{ favorites[key] }})
     </div>
   </div>
 </div>

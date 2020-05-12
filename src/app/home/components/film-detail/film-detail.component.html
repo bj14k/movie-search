@@ -1,10 +1,17 @@
 <div class="content">
   <img
-    src="https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
-    alt="title"
-    title="title"
+    *ngIf="film?.Poster; else noImage"
+    [src]="film?.Poster"
+    [alt]="film?.Title"
+    [title]="film?.Title"
   />
   <div class="details">
-    asdasd
+    {{ film?.Title }} {{ film?.Director ? '/' + film?.Director : '' }}
   </div>
 </div>
+
+<ng-template #noImage>
+  <div class="no-image">
+    No Image
+  </div>
+</ng-template>
